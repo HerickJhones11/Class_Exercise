@@ -1,0 +1,23 @@
+#Classe Quadrado: Crie uma classe que modele um quadrado:
+#Atributos: Tamanho do lado
+#Métodos: Mudar valor do Lado, Retornar valor do Lado e calcular Área;
+
+class Quadrado:
+  def __init__(self,Lado):
+    self.lado=Lado
+  def mudar_lado(self):
+    new = input('Digite o valor do lado:')
+    self.lado=int(new)
+    return 
+  def retornar_lado(self):
+    return print(self.lado)
+  def Area(self):
+      Area=int(self.lado*self.lado)
+      print(Area)
+
+
+q1=Quadrado(4)
+q1.retornar_lado()
+q1.mudar_lado()
+q1.retornar_lado()
+q1.Area()
