@@ -1,0 +1,34 @@
+#Classe Retangulo: Crie uma classe que modele um retangulo:
+#Atributos: LadoA, LadoB (ou Comprimento e Largura, ou Base e Altura, a escolher)
+#Métodos: Mudar valor dos lados, Retornar valor dos lados, calcular Área e calcular Perímetro;
+#Crie um programa que utilize esta classe. Ele deve pedir ao usuário que informe as medidades de um local. 
+#Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de rodapés necessárias para o local.
+#Tamanho piso 60x60cm
+#rodapé largura 60 cm
+class Retangulo:
+    num_piso = 1
+    def __init__(self,Comp,Larg):
+        self.Larg=Larg
+        self.Comp=Comp
+    def mudar_lador(self):
+        new_Comp = input('Digite o novo valor do Comprimento:')
+        new_Larg = input('Digite o novo valor da Largura:')
+        self.Larg=int(new_Larg)
+        self.Comp=int(new_Comp)
+    def Calc_Area_per(self):
+        area=self.Larg*self.Comp
+        per = (self.Larg*2) + (self.Comp*2)
+    def quant_pisos(self):
+        area_piso = 60*60
+        while area_piso != self.area:
+            area_piso=area_piso+area_piso
+            self.num_piso= int(self.num_piso + 1)
+        return print(self.num_piso)
+            
+        
+print('informe as medidas do local:')
+Comp = input('Digite o comprimento:')
+Larg = input('Digite a largura:')
+q1 = Retangulo(600,600)
+print('O número de pisos é :'+q1.quant_pisos)
+        
